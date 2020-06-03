@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_base/base/widget/widget.dart';
+import 'package:flutter_base/widget/widget.dart';
 
 //吐司
 class ToastHelper {
