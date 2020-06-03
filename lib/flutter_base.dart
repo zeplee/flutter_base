@@ -1,9 +1,9 @@
 library flutter_base;
 
+export 'constants.dart';
 export 'helper/helper.dart';
 export 'utils/utils.dart';
 export 'widget/widget.dart';
-export 'constants.dart';
 
 /// A Calculator.
 class Calculator {

@@ -1,7 +1,7 @@
 library helper;
 
-export 'package:provider/provider.dart';
 export 'package:flustars/flustars.dart';
+export 'package:provider/provider.dart';
 
 export 'bus_helper.dart';
 export 'net_helper.dart';
