@@ -1,4 +1,4 @@
-# flutterbase
+# flutter_base
 
 A new Flutter package.
 

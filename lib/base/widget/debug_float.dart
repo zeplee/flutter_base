@@ -1,6 +1,6 @@
 import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterbase/base/constants.dart';
+import 'package:flutter_base/base/constants.dart';
 
 import 'widget.dart';
 
