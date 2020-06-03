@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 //非弹窗组件
-class CommonDlg extends Dialog {
+class CommonPpw{
   final Widget child;
 
-  CommonDlg({@required this.child});
+  CommonPpw({@required this.child});
 
   show(BuildContext context) {}
 

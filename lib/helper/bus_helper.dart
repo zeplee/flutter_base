@@ -1,6 +1,6 @@
-//事件总线
 import 'package:event_bus/event_bus.dart';
 
+//事件总线
 class BusHelper {
   static EventBus _bus;
 

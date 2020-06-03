@@ -6,9 +6,14 @@ homepage: https://github.com/Li-Zepeng/flutter_base.git
 environment:
   sdk: ">=2.7.0 <3.0.0"
 
+# 插件官网：https://pub.flutter-io.cn
 dependencies:
   flutter:
     sdk: flutter
+
+  # cupertino_icons: ^0.1.3 # adds the Cupertino Icons font for iOS style icons
+  # fluttertoast: ^4.0.1 #原生Toast插件 https://github.com/PonnamKarthik/FlutterToast
+  # flutter_screenutil: ^1.1.0 # 屏幕适配 https://github.com/OpenFlutter/flutter_screenutil
 
   path_provider: ^1.6.9 # 路径管理 https://github.com/flutter/plugins/tree/master/packages/path_provider
   package_info: ^0.4.0+18 # 包信息 https://github.com/flutter/plugins/tree/master/packages/package_info
