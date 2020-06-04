@@ -29,11 +29,21 @@ cached_network_image
 ### 工具集
 flustars
 ### 存储
-共享参数:shared_preferences
-数据库:sqflite
+#### 共享参数
+shared_preferences
+#### 数据库
 ### 状态管理
 provider
 ### 事件总线
 event_bus
 ### 公用组件
-toast,dlg,ppw,drag,float
+#### 吐司
+toast,
+#### 阻挡ui弹窗
+dlg
+#### 非阻挡ui弹窗
+ppw
+#### 拖动组件
+drag
+#### 全局浮动组件
+float
