@@ -9,6 +9,7 @@ class CommonFloat {
 
   show(BuildContext context, {int duration, bool isRepeat = false}) {
     if (!isRepeat) {
+      dismiss();
       if (_entry == null && Overlay.of(context) != null) {
         _entry = OverlayEntry(builder: (context) => child);
         Overlay.of(context)?.insert(_entry);
@@ -25,6 +26,7 @@ class CommonFloat {
   }
 
   dismiss() {
-    _entry.remove();
+    _entry?.remove();
+    _entry = null;
   }
 }

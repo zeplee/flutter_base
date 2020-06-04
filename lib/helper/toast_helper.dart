@@ -5,7 +5,9 @@ import 'package:flutter_base/widget/widget.dart';
 class ToastHelper {
   static CommonFloat _float;
 
-  static Widget _getDefaultWidget(BuildContext context, String msg) {
+  static init(Widget widget) {}
+
+  static Widget getDefault(BuildContext context, String msg) {
     return Container(
       color: Colors.transparent,
       margin: EdgeInsets.only(
@@ -29,14 +31,14 @@ class ToastHelper {
     );
   }
 
-  static show(BuildContext context, String msg, {int duration = 2}) {
+  static show(BuildContext context, Widget child, {int duration = 2}) {
     if (_float == null) {
-      _float = CommonFloat(child: _getDefaultWidget(context, msg));
+      _float = CommonFloat(child: child);
     }
-    _float.show(context, duration: duration);
+    _float?.show(context, duration: duration);
   }
 
   static dismiss() {
-    _float.dismiss();
+    _float?.dismiss();
   }
 }
