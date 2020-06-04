@@ -32,9 +32,7 @@ class ToastHelper {
   }
 
   static show(BuildContext context, Widget child, {int duration = 2}) {
-    if (_float == null) {
-      _float = CommonFloat(child: child);
-    }
+    _float = CommonFloat(child: child);
     _float?.show(context, duration: duration);
   }
 
