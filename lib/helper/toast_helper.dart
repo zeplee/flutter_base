@@ -5,8 +5,6 @@ import 'package:flutter_base/widget/widget.dart';
 class ToastHelper {
   static CommonFloat _float;
 
-  static init(Widget widget) {}
-
   static Widget getDefault(BuildContext context, String msg) {
     return Container(
       color: Colors.transparent,
