@@ -16,7 +16,7 @@ packages:
     source: hosted
     version: "2.0.0"
   cached_network_image:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: cached_network_image
       url: "https://pub.flutter-io.cn"
@@ -51,7 +51,7 @@ packages:
     source: hosted
     version: "1.2.1"
   connectivity:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: connectivity
       url: "https://pub.flutter-io.cn"
@@ -85,6 +85,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.1.5"
+  cupertino_icons:
+    dependency: "direct main"
+    description:
+      name: cupertino_icons
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.3"
   decimal:
     dependency: transitive
     description:
@@ -93,21 +100,21 @@ packages:
     source: hosted
     version: "0.3.5"
   device_info:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: device_info
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.4.2+4"
   dio:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: dio
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "3.0.9"
   event_bus:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: event_bus
       url: "https://pub.flutter-io.cn"
@@ -128,14 +135,14 @@ packages:
     source: hosted
     version: "5.1.0"
   fluro:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: fluro
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.6.3"
   flustars:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flustars
       url: "https://pub.flutter-io.cn"
@@ -146,6 +153,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_base:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "0.0.1"
   flutter_cache_manager:
     dependency: transitive
     description:
@@ -154,14 +168,14 @@ packages:
     source: hosted
     version: "1.4.0"
   flutter_keyboard_visibility:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_keyboard_visibility
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.0"
   flutter_svg:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_svg
       url: "https://pub.flutter-io.cn"
@@ -220,7 +234,7 @@ packages:
     source: hosted
     version: "0.0.4"
   package_info:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: package_info
       url: "https://pub.flutter-io.cn"
@@ -248,7 +262,7 @@ packages:
     source: hosted
     version: "0.1.4"
   path_provider:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: path_provider
       url: "https://pub.flutter-io.cn"
@@ -283,7 +297,7 @@ packages:
     source: hosted
     version: "1.9.0"
   permission_handler:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: permission_handler
       url: "https://pub.flutter-io.cn"
@@ -332,7 +346,7 @@ packages:
     source: hosted
     version: "3.0.13"
   provider:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: provider
       url: "https://pub.flutter-io.cn"
@@ -360,7 +374,7 @@ packages:
     source: hosted
     version: "0.24.1"
   shared_preferences:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: shared_preferences
       url: "https://pub.flutter-io.cn"
@@ -400,7 +414,7 @@ packages:
     source: hosted
     version: "1.7.0"
   sqflite:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: sqflite
       url: "https://pub.flutter-io.cn"
@@ -463,7 +477,7 @@ packages:
     source: hosted
     version: "1.1.6"
   url_launcher:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: url_launcher
       url: "https://pub.flutter-io.cn"
