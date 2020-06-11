@@ -21,6 +21,14 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file("key.properties")
+if (keystorePropertiesFile.exists()) {
+    keystorePropertiesFile.withReader('UTF-8') { reader ->
+        keystoreProperties.load(reader)
+    }
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
@@ -46,21 +54,21 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file(rootProject.ext.keystore.storeFile)
-            storePassword rootProject.ext.keystore.storePassword
-            keyAlias rootProject.ext.keystore.keyAlias
-            keyPassword rootProject.ext.keystore.keyPassword
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
         }
     }
 
     buildTypes {
         debug {
 //            ndk { abiFilters "armeabi-v7a", "x86" }
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
         }
         release {
 //            ndk { abiFilters "armeabi-v7a" }
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
         }
     }
 }
