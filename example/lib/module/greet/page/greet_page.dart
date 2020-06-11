@@ -9,16 +9,16 @@ class GreetPage extends StatelessWidget {
     return WillPopScope(
       onWillPop: _onBack(),
       child: Container(
-//        decoration: BoxDecoration(
-//          image: DecorationImage(
+        decoration: BoxDecoration(
+          image: DecorationImage(
 ////            image: NetworkImage(
 ////                'https://img.zcool.cn/community/0372d195ac1cd55a8012062e3b16810.jpg'),
-//            image: CachedNetworkImageProvider(
-//              'https://img.zcool.cn/community/0372d195ac1cd55a8012062e3b16810.jpg',
-//            ),
-//            fit: BoxFit.cover,
-//          ),
-//        ),
+            image: CachedNetworkImageProvider(
+              'https://img.zcool.cn/community/0372d195ac1cd55a8012062e3b16810.jpg',
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Scaffold(
           //背景色改成透明
           backgroundColor: Colors.transparent,
@@ -50,10 +50,12 @@ class GreetPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             GestureDetector(
-              child: SvgPicture.asset(
-                'assets/images/svg2.svg',
-                width: 100,
-              ),
+//              child: SvgPicture.asset(
+//                'assets/images/svg2.svg',
+//                width: 100,
+//              ),
+              child: Text('Enter',
+                  style: Theme.of(context).primaryTextTheme.headline6),
               onTap: () {
                 ToastHelper.show(
                     context, ToastHelper.getDefault(context, "退出欢迎页"));

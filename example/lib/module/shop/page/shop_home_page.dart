@@ -380,7 +380,8 @@ class ShopHomeBodyListItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         textDirection: TextDirection.rtl,
         children: <Widget>[
-          Text('Column$index', style: Theme.of(context).primaryTextTheme.title),
+          Text('Column$index',
+              style: Theme.of(context).primaryTextTheme.headline6),
           ListTile(
               title: Text(
                 data,

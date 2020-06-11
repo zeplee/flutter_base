@@ -44,6 +44,14 @@ android {
         versionName flutterVersionName
 //        resConfigs 'zh' //去除资源（包括依赖）中的外文资源
     }
+    signingConfigs {
+        release {
+            storeFile file(rootProject.ext.keystore.storeFile)
+            storePassword rootProject.ext.keystore.storePassword
+            keyAlias rootProject.ext.keystore.keyAlias
+            keyPassword rootProject.ext.keystore.keyPassword
+        }
+    }
 
     buildTypes {
         debug {
