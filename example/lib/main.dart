@@ -100,6 +100,16 @@ class App extends StatelessWidget {
       darkTheme: Global.darkTheme,
       themeMode: Global.themeMode,
 
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('zh', 'CH'),
+        const Locale('en', 'US'),
+      ],
+//      locale: Locale('zh'),
+
       navigatorKey: RouteHelper.navigatorKey,
       routes: Global.routes,
 //      onGenerateRoute: Global.onGenerateRoute,

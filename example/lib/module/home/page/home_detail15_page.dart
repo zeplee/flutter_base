@@ -53,7 +53,7 @@ class HomeDetail15Page extends StatelessWidget {
       ),
       applicationName: '应用程序',
       applicationVersion: '1.0.0',
-      applicationLegalese: 'copyright 老孟，一枚有态度的程序员',
+//      applicationLegalese: 'copyright 老孟，一枚有态度的程序员',
       children: <Widget>[
         Container(
           height: 30,
