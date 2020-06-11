@@ -50,10 +50,6 @@ class GreetPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             GestureDetector(
-//              child: SvgPicture.asset(
-//                'assets/images/svg2.svg',
-//                width: 100,
-//              ),
               child: Text('Enter',
                   style: Theme.of(context).primaryTextTheme.headline6),
               onTap: () {
