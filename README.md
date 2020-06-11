@@ -13,8 +13,9 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-https://n10w8r.coding-pages.com/docs/web
-https://zeplee.github.io/flutter_base/web
+https://n10w8r.coding-pages.com/release/web
+https://zeplee.github.io/flutter_base/web 或 https://zeplee.github.io/flutter_base/release/web
+
 
 ## 发布指南
 https://www.cnblogs.com/yangyxd/p/9234405.html

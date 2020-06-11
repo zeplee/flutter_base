@@ -117,6 +117,7 @@ class Global {
   static const homeDetail12Page = '/HomePage/HomeDetail12Page';
   static const homeDetail13Page = '/HomePage/HomeDetail13Page';
   static const homeDetail14Page = '/HomePage/HomeDetail14Page';
+  static const homeDetail15Page = '/HomePage/HomeDetail15Page';
 
   static const shopIndexPage = '/ShopIndexPage';
   static const shopCartsPage = '/ShopCartsPage';
@@ -141,6 +142,7 @@ class Global {
     homeDetail12Page: (BuildContext context) => HomeDetail12Page(),
     homeDetail13Page: (BuildContext context) => HomeDetail13Page(),
     homeDetail14Page: (BuildContext context) => HomeDetail14Page(),
+    homeDetail15Page: (BuildContext context) => HomeDetail15Page(),
     shopIndexPage: (BuildContext context) => ShopIndexPage(),
     shopCartsPage: (BuildContext context) => ShopCartsPage(),
   };
