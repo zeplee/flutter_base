@@ -15,7 +15,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## web预览
 ### github-page
-https://zeplee.github.io/flutter_base/web
+https://zeplee.github.io/flutter_base/release/web
 ### coding-page
 https://n10w8r.coding-pages.com/release/web
 
