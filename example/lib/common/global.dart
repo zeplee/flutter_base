@@ -87,6 +87,11 @@ class Global {
 //        errorColor: Colors.indigoAccent,
 //        canvasColor: Colors.yellow,
 //        primaryColorBrightness: Brightness.dark,
+    //dialog主题
+//    dialogTheme: DialogTheme(backgroundColor: Colors.transparent),
+    //Sheet主题
+    bottomSheetTheme:
+        BottomSheetThemeData(modalBackgroundColor: Colors.transparent),
   );
 
   //统一转场动画（会覆盖掉侧滑返回功能）
@@ -118,6 +123,7 @@ class Global {
   static const homeDetail13Page = '/HomePage/HomeDetail13Page';
   static const homeDetail14Page = '/HomePage/HomeDetail14Page';
   static const homeDetail15Page = '/HomePage/HomeDetail15Page';
+  static const homeDetail16Page = '/HomePage/HomeDetail16Page';
 
   static const shopIndexPage = '/ShopIndexPage';
   static const shopCartsPage = '/ShopCartsPage';
@@ -143,6 +149,7 @@ class Global {
     homeDetail13Page: (BuildContext context) => HomeDetail13Page(),
     homeDetail14Page: (BuildContext context) => HomeDetail14Page(),
     homeDetail15Page: (BuildContext context) => HomeDetail15Page(),
+    homeDetail16Page: (BuildContext context) => HomeDetail16Page(),
     shopIndexPage: (BuildContext context) => ShopIndexPage(),
     shopCartsPage: (BuildContext context) => ShopCartsPage(),
   };

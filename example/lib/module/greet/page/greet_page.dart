@@ -53,8 +53,6 @@ class GreetPage extends StatelessWidget {
               child: Text('Enter',
                   style: Theme.of(context).primaryTextTheme.headline6),
               onTap: () {
-                ToastHelper.show(
-                    context, ToastHelper.getDefault(context, "退出欢迎页"));
                 RouteHelper.pop();
               },
             ),

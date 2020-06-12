@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
     '本地列表': Global.homeDetail13Page,
     '网络列表': Global.homeDetail14Page,
     'Dialog': Global.homeDetail15Page,
+    '自带搜索': Global.homeDetail16Page,
     '商城模版': Global.shopIndexPage,
   };
 

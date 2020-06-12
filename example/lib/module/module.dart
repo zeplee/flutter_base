@@ -9,6 +9,7 @@ export 'home/page/home_detail12_page.dart';
 export 'home/page/home_detail13_page.dart';
 export 'home/page/home_detail14_page.dart';
 export 'home/page/home_detail15_page.dart';
+export 'home/page/home_detail16_page.dart';
 export 'home/page/home_detail1_page.dart';
 export 'home/page/home_detail2_page.dart';
 export 'home/page/home_detail3_page.dart';
