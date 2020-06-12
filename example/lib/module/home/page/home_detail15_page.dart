@@ -207,10 +207,11 @@ class HomeDetail15Page extends StatelessWidget {
     showBottomSheet(
       context: context,
       builder: (context) {
-        return Container(
-          margin: EdgeInsets.only(bottom: 40),
-          //保证控件居中效果
-          child: Text('你啊哈'),
+        return FlatButton(
+          child: Text('确认'),
+          onPressed: () {
+            Navigator.of(context).pop('ok');
+          },
         );
       },
     );
