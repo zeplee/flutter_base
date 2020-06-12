@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:event_bus/event_bus.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -72,6 +73,8 @@ _handleError() {
     },
   );
 }
+
+EventBus bus = EventBus();
 
 class App extends StatelessWidget {
   @override
