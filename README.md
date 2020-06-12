@@ -13,14 +13,34 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+## web预览
+### github-page
+https://zeplee.github.io/flutter_base/web
+### coding-page
 https://n10w8r.coding-pages.com/release/web
-https://zeplee.github.io/flutter_base/web 或 https://zeplee.github.io/flutter_base/release/web
 
-
-## 发布指南
-https://www.cnblogs.com/yangyxd/p/9234405.html
 ## 依赖使用
-https://blog.csdn.net/mqdxiaoxiao/article/details/102519577
+### pub.dev
+dependencies:
+  flutter_base: '^0.0.1'
+### Hosted
+dependencies:
+  flutter_base:
+    hosted:
+      name: flutter_base
+      url: http://your-package-server.com
+    version: ^0.0.0
+### Git
+dependencies:
+  flutter_base:
+     git:
+       url: https://github.com/Li-Zepeng/flutter_base.git
+       ref: some-branch
+       path: packages/package1 如上配置默认认为package项目位于仓库的根目录上，若不是，需用path:配置指出具体的子目录
+### Path
+dependencies:
+  flutter_base:
+     path: ../plugins/plugin1 相对路径
 ## 功能
 ### 网络
 dio
