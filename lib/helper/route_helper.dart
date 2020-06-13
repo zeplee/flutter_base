@@ -120,7 +120,7 @@ class AppPageRoute extends PageRouteBuilder {
   AppPageRoute(this.widget)
       : super(
           //true-不透明 false-透明
-          opaque: true,
+          opaque: false,
           //背景色
           barrierColor: Color(0x05522033),
           transitionDuration: Duration(seconds: 1),

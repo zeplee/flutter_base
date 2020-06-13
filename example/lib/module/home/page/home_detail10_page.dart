@@ -13,6 +13,7 @@ class HomeDetail10PageState extends State<HomeDetail10Page> {
   double _height = 50;
   Color _color = Colors.green;
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
+  IconData _actionIcon = Icons.delete;
 
   @override
   Widget build(BuildContext context) {
@@ -51,14 +52,42 @@ class HomeDetail10PageState extends State<HomeDetail10Page> {
         ),
       );
 
-  _buildBody() => AnimatedContainer(
-        width: _width,
-        height: _height,
-        decoration: BoxDecoration(
-          color: _color,
-          borderRadius: _borderRadius,
-        ),
-        duration: Duration(seconds: 1),
-        curve: Curves.fastOutSlowIn,
+  _buildBody() => Column(
+        children: [
+          AnimatedContainer(
+            width: _width,
+            height: _height,
+            decoration: BoxDecoration(
+              color: _color,
+              borderRadius: _borderRadius,
+            ),
+            duration: Duration(seconds: 1),
+            curve: Curves.fastOutSlowIn,
+          ),
+          AnimatedSwitcher(
+            transitionBuilder: (child, value) =>
+                ScaleTransition(child: child, scale: value),
+            duration: Duration(milliseconds: 300),
+            child: IconButton(
+              key: ValueKey(_actionIcon),
+              icon: Icon(_actionIcon),
+              onPressed: () {
+                setState(() {
+                  if (_actionIcon == Icons.delete)
+                    _actionIcon = Icons.done;
+                  else
+                    _actionIcon = Icons.delete;
+                });
+              },
+            ),
+//            layoutBuilder:
+//                (Widget currentChild, List<Widget> previousChildren) {
+//              return Stack(
+//                children: <Widget>[...previousChildren, currentChild],
+//                alignment: Alignment.center,
+//              );
+//            },
+          ),
+        ],
       );
 }

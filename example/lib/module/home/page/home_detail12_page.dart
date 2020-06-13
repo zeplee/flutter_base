@@ -42,43 +42,42 @@ class HomeDetail12Page extends StatelessWidget {
           return Column(
             children: <Widget>[
               Container(
-                  width: double.infinity,
-                  height: 200.0,
-                  child: Row(
-                    //字体底部对齐或首字母底部对齐,目前只对英文有效
-                    textBaseline: TextBaseline.ideographic,
-                    textDirection: TextDirection.ltr,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    verticalDirection: VerticalDirection.up,
-                    crossAxisAlignment: CrossAxisAlignment.baseline,
-                    children: <Widget>[
-                      Text('Hey!', style: TextStyle(fontSize: 30)),
-                      Text('Hey!', style: TextStyle(fontSize: 50)),
-                      Text('Hey!', style: TextStyle(fontSize: 40)),
-                      RaisedButton(
-                        child: Text('Hey'),
-                        onPressed: () {
-                          Scaffold.of(context).showSnackBar(SnackBar(
-                            content: Text(UserEntity.fromJson(
-                              json.decode(
-                                  '{"version":"1.0","timestamp":"190627T153330.389Z","status":0,"errorMsg":"全部成功","elapsed":0,"trackId":null,"data":"第二件0元起"}'),
-                            ).version),
-                            action: SnackBarAction(
-                              label: '取消',
-                              onPressed: () {
-                                Navigator.popUntil(context,
-                                    ModalRoute.withName(Global.homePage));
-                              },
-                            ),
-                          ));
-                          ToastHelper.show(
-                              context,
-                              ToastHelper.getDefault(
-                                  context, "点击了RaisedButton"));
-                        },
-                      )
-                    ],
-                  )),
+                width: double.infinity,
+                height: 100.0,
+                child: Row(
+                  //字体底部对齐或首字母底部对齐,目前只对英文有效
+                  textBaseline: TextBaseline.ideographic,
+                  textDirection: TextDirection.ltr,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  verticalDirection: VerticalDirection.up,
+                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                  children: <Widget>[
+                    Text('Hey!', style: TextStyle(fontSize: 30)),
+                    Text('Hey!', style: TextStyle(fontSize: 50)),
+                    Text('Hey!', style: TextStyle(fontSize: 40)),
+                    RaisedButton(
+                      child: Text('Hey'),
+                      onPressed: () {
+                        Scaffold.of(context).showSnackBar(SnackBar(
+                          content: Text(UserEntity.fromJson(
+                            json.decode(
+                                '{"version":"1.0","timestamp":"190627T153330.389Z","status":0,"errorMsg":"全部成功","elapsed":0,"trackId":null,"data":"第二件0元起"}'),
+                          ).version),
+                          action: SnackBarAction(
+                            label: '取消',
+                            onPressed: () {
+                              Navigator.popUntil(context,
+                                  ModalRoute.withName(Global.homePage));
+                            },
+                          ),
+                        ));
+                        ToastHelper.show(context,
+                            ToastHelper.getDefault(context, "点击了RaisedButton"));
+                      },
+                    )
+                  ],
+                ),
+              ),
               SizedBox(
                 height: 40,
                 child: FlatButton(
@@ -86,6 +85,18 @@ class HomeDetail12Page extends StatelessWidget {
                   shape: StadiumBorder(),
                   onPressed: () {},
                   child: Text('发发多少'),
+                ),
+              ),
+              Container(
+                color: Colors.lightBlue,
+                child: Align(
+                  widthFactor: 4,
+                  heightFactor: 4,
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                    color: Colors.red,
+                  ),
                 ),
               ),
               Container(

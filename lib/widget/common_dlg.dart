@@ -244,6 +244,7 @@ class CommonDlg3 extends Dialog {
           child: CupertinoActivityIndicator(
             radius: 18,
           ),
+//          child: CircularProgressIndicator(),
         ),
         onWillPop: () async {
           return Future.value(true);
