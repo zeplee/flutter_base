@@ -5,16 +5,19 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "index.html": "5bc99290f18a830e68f526028bab6d40",
 "/": "5bc99290f18a830e68f526028bab6d40",
-"main.dart.js": "053d136b2b19ccaab691bea9115fb00d",
+"main.dart.js": "21ceee5825b769dcb991a8e6a0332f65",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "cfc1f91d6fc4de8eac83079c407432cc",
-"assets/AssetManifest.json": "0aded3df23af333f26bd4ac36618aa9a",
-"assets/NOTICES": "f4e9144f3b6f23ce52e95c10dcb6d5d8",
-"assets/FontManifest.json": "63c26c99e9b60dd53c7948df410f57e0",
+"assets/AssetManifest.json": "c2a985af68f8cf8d70c60a2c1803d819",
+"assets/NOTICES": "b43ac81c357ea09cdc2e1fd85a746d50",
+"assets/FontManifest.json": "b62d4a36687aa0d12158087da8b733fe",
 "assets/fonts/Gotham-Book.otf": "e2f36b6c6ef96564f853a40475dd0773",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
+"assets/assets/images/flare_logo.png": "d1df63be42c84e70f656a447efd35b0a",
+"assets/assets/images/2.0x/flare_logo.png": "d1df63be42c84e70f656a447efd35b0a",
+"assets/assets/images/3.0x/flare_logo.png": "e385f5ca212bc2f91b3f6d308a522fa3",
 "assets/assets/images/ic_launcher2.png": "96e752610906ba2a93c65f8abe1645f1",
 "assets/assets/images/splash.png": "4c07209b15152b1ac4284e336628b200",
 "assets/assets/images/ic_launcher.png": "a374d5de92f3d65773c23d576e549ab3",
@@ -28,7 +31,7 @@ const CORE = [
   "/",
 "main.dart.js",
 "index.html",
-"assets/LICENSE",
+"assets/NOTICES",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
 
@@ -110,7 +113,7 @@ self.addEventListener("fetch", (event) => {
   if (event.request.url == origin || event.request.url.startsWith(origin + '/#')) {
     key = '/';
   }
-  // If the URL is not the the RESOURCE list, skip the cache.
+  // If the URL is not the RESOURCE list, skip the cache.
   if (!RESOURCES[key]) {
     return event.respondWith(fetch(event.request));
   }
@@ -133,11 +136,11 @@ self.addEventListener("fetch", (event) => {
 self.addEventListener('message', (event) => {
   // SkipWaiting can be used to immediately activate a waiting service worker.
   // This will also require a page refresh triggered by the main worker.
-  if (event.message == 'skipWaiting') {
+  if (event.data === 'skipWaiting') {
     return self.skipWaiting();
   }
 
-  if (event.message = 'downloadOffline') {
+  if (event.message === 'downloadOffline') {
     downloadOffline();
   }
 });
@@ -157,8 +160,8 @@ async function downloadOffline() {
   }
   for (var resourceKey in Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
-      resources.add(resourceKey);
+      resources.push(resourceKey);
     }
   }
-  return Cache.addAll(resources);
+  return contentCache.addAll(resources);
 }
