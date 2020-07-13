@@ -5,6 +5,10 @@ import 'package:flutter_base_example/module/module.dart';
 
 ///全局状态
 class Global {
+  static const buglyAndroidAppId = "7acce5892e";
+
+  static const buglyIosAppId = "d5b7158852";
+
 //  static const themes = [];
 // 是否显示 Material design 基础布局网格，用来调试 UI 的工具
   static const debugShowMaterialGrid = false;

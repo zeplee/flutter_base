@@ -20,6 +20,7 @@ dependencies:
     # the parent directory to use the current plugin's version. 
     path: ../
 
+  flutter_bugly: ^0.2.8
   #  flutter_base:
   #    git:
   #      url: https://github.com/Li-Zepeng/flutter_base.git
