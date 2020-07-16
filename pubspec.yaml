@@ -36,7 +36,7 @@ dependencies:
   url_launcher: ^5.5.0 #打开url https://github.com/flutter/plugins/tree/master/packages/url_launcher
 
   event_bus: ^1.1.1 # 事件总线  https://github.com/marcojakob/dart-event-bus
-  flustars: ^0.3.2 # 工具库 https://github.com/Sky24n/flustars
+  flustars: ^0.3.3 # 工具库 https://github.com/Sky24n/flustars
 
 #  flutter_launcher_icons: ^0.7.5  # android/ios启动图标 flutter pub run flutter_launcher_icons:main https://github.com/fluttercommunity/flutter_launcher_icons
 #  flutter_native_splash: ^0.1.9 # android/ios闪屏页 flutter pub run flutter_native_splash:create https://github.com/henriquearthur/flutter_native_splash
