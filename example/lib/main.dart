@@ -50,44 +50,44 @@ _handleSdk() async {
   //  DebugFloat.init(context);
 }
 
-//_handleError() {
-//  ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
-//    //收集Flutter异常发送给runZoned的onError
-//    Zone.current
-//        .handleUncaughtError(errorDetails.exception, errorDetails.stack);
-//    //定制错误页面
-//    return ErrorPage(errorDetails: errorDetails);
-//  };
-//  runZoned(
-//    () => runApp(App()),
-//    zoneSpecification: ZoneSpecification(
-//      print: (Zone self, ZoneDelegate parent, Zone zone, String line) {
-//        if (!Constants.IS_DEBUG()) {
-//          // _reportLog(line); //收集日志
-//        }
-//      },
-//    ),
-//    onError: (Object obj, StackTrace stack) {
-//      if (!Constants.IS_DEBUG()) {
-//        // _reportError(obj, stack); //收集Dart异常
-//      }
-//    },
-//  );
-//}
-
 _handleError() {
   ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
+    //收集Flutter异常发送给runZoned的onError
     Zone.current
         .handleUncaughtError(errorDetails.exception, errorDetails.stack);
     //定制错误页面
     return ErrorPage(errorDetails: errorDetails);
   };
-  FlutterBugly.postCatchedException(() {
-    runApp(App());
-  });
-  FlutterBugly.init(
-      androidAppId: Global.buglyAndroidAppId, iOSAppId: Global.buglyIosAppId);
+  runZoned(
+    () => runApp(App()),
+    zoneSpecification: ZoneSpecification(
+      print: (Zone self, ZoneDelegate parent, Zone zone, String line) {
+        if (!Constants.IS_DEBUG()) {
+          // _reportLog(line); //收集日志
+        }
+      },
+    ),
+    onError: (Object obj, StackTrace stack) {
+      if (!Constants.IS_DEBUG()) {
+        // _reportError(obj, stack); //收集Dart异常
+      }
+    },
+  );
 }
+
+//_handleError() {
+//  ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
+//    Zone.current
+//        .handleUncaughtError(errorDetails.exception, errorDetails.stack);
+//    //定制错误页面
+//    return ErrorPage(errorDetails: errorDetails);
+//  };
+//  FlutterBugly.postCatchedException(() {
+//    runApp(App());
+//  });
+//  FlutterBugly.init(
+//      androidAppId: Global.buglyAndroidAppId, iOSAppId: Global.buglyIosAppId);
+//}
 
 class App extends StatelessWidget {
   @override
